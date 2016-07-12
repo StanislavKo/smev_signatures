@@ -1,0 +1,18 @@
+#OS files
+.DS_Store*
+
+# eclipse files
+.project
+.settings*
+.classpath*
+.errai*
+.gwt*
+.metadata*
+.gwt-log*
+gwt-unitCache*
+log.txt
+
+# maven target & temporary files
+target*
+/smev-war/soapui.log
+/smev-war/soapui-errors.log

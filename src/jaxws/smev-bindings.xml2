@@ -1,0 +1,11 @@
+<jxb:bindings version="2.0" xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc">
+
+	<jxb:bindings xmlns:xs="http://www.w3.org/2001/XMLSchema" schemaLocation="../wsdl/SID0003022/N1395345249/OwsmImport.xsd" node="/xs:schema">
+    	<jxb:schemaBindings>           
+    		<!--jxb:package name="com.agiliumlabs.smev.ws.model"/-->
+   		</jxb:schemaBindings>
+   	</jxb:bindings>
+    
+	
+</jxb:bindings>

@@ -1,0 +1,31 @@
+<jaxb:bindings xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
+	xmlns:jaxws="http://java.sun.com/xml/ns/jaxws" xmlns:smev="http://smev.gosuslugi.ru/rev120315" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" jaxb:version="2.0">
+	<!-- Disable default wrapper style -->
+	<jaxb:bindings schemaLocation="../wsdl/SID0003022_Copy/smev.gosuslugi.ru.rev120315.xsd" node="//xs:element[@name='BinaryData']">
+		<jaxb:inlineBinaryData/>
+	</jaxb:bindings>
+	<jaxb:bindings schemaLocation="../wsdl/SID0003022_Copy/smev.gosuslugi.ru.rev120315.xsd" node="//xs:element[@name='DigestValue']">
+		<jaxb:inlineBinaryData/>
+	</jaxb:bindings>
+	<!-- <jaxb:bindings schemaLocation="g:\Projects\SMEV_08-HydroXSD-Mvn\data\wsdl\smev.gosuslugi.ru.rev120315.xsd">
+		<jaxb:bindings node="//xs:element[@name='BinaryData']">
+		<jaxb:inlineBinaryData/>
+		</jaxb:bindings>
+		</jaxb:bindings>
+	-->	<!-- <bindings node="wsdl:definitions/wsdl:types/xs:element[@name='BinaryData']">
+		<inlineBinaryData/>
+		</bindings>
+		<bindings schemaLocation="smev.gosuslugi.ru.rev120315.xsd" node="//xs:element[@name='BinaryData']">
+		<inlineBinaryData/>
+		</bindings>
+		<bindings schemaLocation="g:\Projects\SMEV_08-HydroXSD-Mvn\data\wsdl\smev.gosuslugi.ru.rev120315.xsd">
+		<bindings node="/xs:schema/xs:element[@name='BinaryData']">
+		<inlineBinaryData/>
+		</bindings>
+		<bindings node="//xs:element[@name='DigestValue']">
+		<inlineBinaryData/>
+		</bindings>
+		</bindings>
+	-->
+</jaxb:bindings>

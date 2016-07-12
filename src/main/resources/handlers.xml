@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<handler-chains xmlns="http://java.sun.com/xml/ns/javaee">
+    <handler-chain>
+       <handler>
+           <handler-name>SOAPLoggingHandler</handler-name>
+           <handler-class>com.agiliumlabs.smev.ws.impl.server.SOAPLoggingHandler</handler-class>
+       </handler>
+    </handler-chain>
+</handler-chains>

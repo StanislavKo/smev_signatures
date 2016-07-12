@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2.4-b01. --><xs:schema xmlns:tns="http://server.impl.ws.smev.agiliumlabs.com/SmevServer/xsd/types" xmlns:ns1="http://smev.gosuslugi.ru/rev120315" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://server.impl.ws.smev.agiliumlabs.com/SmevServer/xsd/types">
+
+<xs:import namespace="http://smev.gosuslugi.ru/rev120315" schemaLocation="SID0003022/N1395345249/OwsmImport.xsd"></xs:import>
+
+<xs:element name="SyncRequest" nillable="true" type="tns:SyncRequestType"></xs:element>
+
+<xs:element name="SyncResponse" nillable="true" type="tns:SyncResponseType"></xs:element>
+
+<xs:element name="aSyncReqRequest" nillable="true" type="tns:SyncRequestType"></xs:element>
+
+<xs:element name="aSyncReqResponse" nillable="true" type="tns:SyncResponseType"></xs:element>
+
+<xs:element name="aSyncResultRequest" nillable="true" type="tns:SyncRequestType"></xs:element>
+
+<xs:element name="aSyncResultResponse" nillable="true" type="tns:SyncResponseType"></xs:element>
+
+<xs:complexType name="SyncRequestType">
+<xs:sequence>
+<xs:element ref="ns1:Message"></xs:element>
+<xs:element ref="ns1:MessageData"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="SyncResponseType">
+<xs:sequence>
+<xs:element ref="ns1:Message"></xs:element>
+<xs:element ref="ns1:MessageData"></xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

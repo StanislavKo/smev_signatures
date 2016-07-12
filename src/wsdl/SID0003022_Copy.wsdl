@@ -1,0 +1,94 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<wsdl:definitions name="MsgExapmle" targetNamespace="http://smev.gosuslugi.ru/MsgExample/" xmlns:p="http://www.w3.org/2001/XMLSchema"
+	xmlns:smev="http://smev.gosuslugi.ru/rev120315" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://smev.gosuslugi.ru/MsgExample/"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd1="http://smev.gosuslugi.ru/MsgExample/xsd/types" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+	<wsp:Policy wsu:Id="SmevServerPortBinding_MTOM_Policy">
+		<wsp2:OptimizedMimeSerialization xmlns:wsp2="http://schemas.xmlsoap.org/ws/2004/09/policy/optimizedmimeserialization"
+			wsp:Optional="true"></wsp2:OptimizedMimeSerialization>
+	</wsp:Policy>
+	<wsdl:types>
+		<xsd:schema targetNamespace="http://smev.gosuslugi.ru/MsgExample/">
+			<xsd:import namespace="http://smev.gosuslugi.ru/rev120315" schemaLocation="SID0003022_Copy/smev.gosuslugi.ru.rev120315.xsd"/>
+			<xsd:element name="SyncRequest" type="smev:SyncRequestType"/>
+			<xsd:element name="SyncResponse" type="smev:SyncResponseType"/>
+			<xsd:element name="aSyncReqRequest" type="smev:SyncRequestType"/>
+			<xsd:element name="aSyncReqResponse" type="smev:SyncResponseType"/>
+			<xsd:element name="aSyncResultRequest" type="smev:SyncRequestType"/>
+			<xsd:element name="aSyncResultResponse" type="smev:SyncResponseType"/>
+		</xsd:schema>
+	</wsdl:types>
+	<wsdl:message name="syncReqResponse">
+		<wsdl:part element="tns:SyncResponse" name="parameters"/>
+	</wsdl:message>
+	<wsdl:message name="aSyncResultResponse">
+		<wsdl:part element="tns:aSyncResultResponse" name="parameters"/>
+	</wsdl:message>
+	<wsdl:message name="aSyncResultRequest">
+		<wsdl:part element="smev:Header" name="smevHeader"/>
+		<wsdl:part element="tns:aSyncResultRequest" name="parameters"/>
+	</wsdl:message>
+	<wsdl:message name="aSyncReqRequest">
+		<wsdl:part element="smev:Header" name="smevHeader"/>
+		<wsdl:part element="tns:aSyncReqRequest" name="parameters"/>
+	</wsdl:message>
+	<wsdl:message name="aSyncReqResponse">
+		<wsdl:part element="tns:aSyncReqResponse" name="parameters"/>
+	</wsdl:message>
+	<wsdl:message name="syncReqRequest">
+		<wsdl:part element="smev:Header" name="smevHeader"/>
+		<wsdl:part element="tns:SyncRequest" name="parameters"/>
+	</wsdl:message>
+	<wsdl:portType name="MsgExamplePort">
+		<wsdl:operation name="syncReq">
+			<wsdl:input message="tns:syncReqRequest"/>
+			<wsdl:output message="tns:syncReqResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="aSyncReq">
+			<wsdl:input message="tns:aSyncReqRequest"/>
+			<wsdl:output message="tns:aSyncReqResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="aSyncResult">
+			<wsdl:input message="tns:aSyncResultRequest"/>
+			<wsdl:output message="tns:aSyncResultResponse"/>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="MsgExampleBinding" type="tns:MsgExamplePort">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsdl:operation name="syncReq">
+			<soap:operation soapAction="http://smev.gosuslugi.ru/MsgExample/syncReq"/>
+			<wsdl:input>
+				<soap:header message="tns:syncReqRequest" part="smevHeader" use="literal" wsdl:required="false"/>
+				<soap:body parts="parameters" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="aSyncReq">
+			<soap:operation soapAction="http://smev.gosuslugi.ru/MsgExample/aSyncReq"/>
+			<wsdl:input>
+				<soap:header message="tns:aSyncReqRequest" part="smevHeader" use="literal" wsdl:required="false"/>
+				<soap:body parts="parameters" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="aSyncResult">
+			<soap:operation soapAction="http://smev.gosuslugi.ru/MsgExample/aSyncResult"/>
+			<wsdl:input>
+				<soap:header message="tns:aSyncResultRequest" part="smevHeader" use="literal" wsdl:required="false"/>
+				<soap:body parts="parameters" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="MsgExampleService">
+		<wsdl:port binding="tns:MsgExampleBinding" name="MsgExamplePort">
+			<soap:address location="http://d00smevapp01:9999/gateway/services/SID0003022"/>
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

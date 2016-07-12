@@ -1,0 +1,8 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:smev="http://smev.gosuslugi.ru/rev120315"
+	xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+	<soap:Header><smev:Header><smev:NodeId>1</smev:NodeId><smev:MessageId>12311111-1111-1000-01</smev:MessageId><smev:TimeStamp>2012-02-02T00:02:02</smev:TimeStamp><smev:MessageClass>REQUEST</smev:MessageClass></smev:Header>
+	</soap:Header>
+	<soap:Body wsu:Id="body"><ns:PutDocument xmlns="http://www.w3.org/2004/08/xop/include" xmlns:ns="http://www.red-soft.biz/ncore/dx/ws/smev-243"><smev:Message><smev:Sender><smev:Code>ADLR01481</smev:Code><smev:Name>innovativeWork</smev:Name></smev:Sender><smev:Recipient><smev:Code>ADLR01481</smev:Code><smev:Name>The security provider should be certified, that is why there is no much choice, Crypto Pro probably is the only one available. Bouncycastle implements</smev:Name></smev:Recipient><smev:TypeCode>GSRV</smev:TypeCode><smev:Status>REQUEST</smev:Status><smev:Date>2012-02-02T02:02:02</smev:Date><smev:ExchangeType>2</smev:ExchangeType><smev:ServiceCode>SERVICE001</smev:ServiceCode><smev:CaseNumber>CASE001</smev:CaseNumber><smev:TestMsg>SMEVTEST</smev:TestMsg></smev:Message><smev:MessageData
+	Id="appDocument">
+	<smev:AppDocument>
+		<smev:RequestCode></smev:RequestCode><smev:BinaryData></smev:BinaryData></smev:AppDocument></smev:MessageData></ns:PutDocument></soap:Body></soap:Envelope>

@@ -1,0 +1,22 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<schema targetNamespace="http://smev.gosuslugi.ru/MsgExample/xsd/types" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:msgtp="http://smev.gosuslugi.ru/MsgExample/xsd/types" xmlns:smev="http://smev.gosuslugi.ru/rev120315">
+ <import namespace="http://smev.gosuslugi.ru/rev120315" schemaLocation="../../SID0003022/N1395345249/OwsmImport.xsd"/>
+ <element name="SyncRequest" type="msgtp:SyncRequestType"/>
+ <element name="SyncResponse" type="msgtp:SyncResponseType"/>
+ <element name="aSyncReqRequest" type="msgtp:SyncRequestType"/>
+ <element name="aSyncReqResponse" type="msgtp:SyncResponseType"/>
+ <element name="aSyncResultRequest" type="msgtp:SyncRequestType"/>
+ <element name="aSyncResultResponse" type="msgtp:SyncResponseType"/>
+ <complexType name="SyncRequestType">
+  <sequence>
+   <element ref="smev:Message"/>
+   <element ref="smev:MessageData"/>
+  </sequence>
+ </complexType>
+ <complexType name="SyncResponseType">
+  <sequence>
+   <element ref="smev:Message"/>
+   <element ref="smev:MessageData"/>
+  </sequence>
+ </complexType>
+</schema>
